@@ -26,6 +26,13 @@ async def get_index(request: Request):
 async def get_legging(request: Request):
     return templates.TemplateResponse("legging.html", {"request": request})
 
+@app.get("/shorts", response_class=HTMLResponse)
+async def get_shorts(request: Request):
+    return templates.TemplateResponse("shorts.html", {"request": request})
+
+@app.get("/shorts2", response_class=HTMLResponse)
+async def get_shorts2(request: Request):
+    return templates.TemplateResponse("shorts2.html", {"request": request})
 
 @app.get("/legging2", response_class=HTMLResponse)
 async def get_legging2(request: Request):
