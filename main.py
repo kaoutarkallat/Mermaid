@@ -22,6 +22,10 @@ templates = Jinja2Templates(directory="static")
 async def get_index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
+@app.get("/checkout", response_class=HTMLResponse)
+async def get_checkout(request: Request):
+    return templates.TemplateResponse("checkout.html", {"request": request})
+
 @app.get("/legging", response_class=HTMLResponse)
 async def get_legging(request: Request):
     return templates.TemplateResponse("legging.html", {"request": request})
@@ -33,6 +37,22 @@ async def get_shorts(request: Request):
 @app.get("/shorts2", response_class=HTMLResponse)
 async def get_shorts2(request: Request):
     return templates.TemplateResponse("shorts2.html", {"request": request})
+
+@app.get("/shorts3", response_class=HTMLResponse)
+async def get_shorts2(request: Request):
+    return templates.TemplateResponse("shorts3.html", {"request": request})
+
+@app.get("/bras", response_class=HTMLResponse)
+async def get_bras(request: Request):
+    return templates.TemplateResponse("bras.html", {"request": request})
+
+@app.get("/bras2", response_class=HTMLResponse)
+async def get_bras2(request: Request):
+    return templates.TemplateResponse("bras2.html", {"request": request})
+
+@app.get("/bras3", response_class=HTMLResponse)
+async def get_bras2(request: Request):
+    return templates.TemplateResponse("bras3.html", {"request": request})
 
 @app.get("/legging2", response_class=HTMLResponse)
 async def get_legging2(request: Request):
